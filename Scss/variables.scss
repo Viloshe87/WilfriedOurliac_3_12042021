@@ -1,0 +1,21 @@
+
+/*Variables*/
+
+ $color-primary:#9356DC;
+ $color-secondary:#FF79DA;
+ $color-tertiary:#99E2D0;
+ $color-container1:#F6F6F6;
+ $color-icon:#7E7E7E;
+
+   /*Button*/
+ 
+   .btn{
+    border-radius:40px;
+    padding: 15px;
+    background: linear-gradient($color-secondary,$color-primary);
+    color: white;
+    border: none;
+    width: 200px;
+    height: 80px;
+    margin-top: 25px;
+}
