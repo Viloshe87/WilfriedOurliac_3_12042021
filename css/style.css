@@ -8,7 +8,6 @@
 }
 a {
   text-decoration: none;
-  color: white;
 }
 
 /*Body*/
@@ -21,6 +20,10 @@ body {
   max-width: 1100px;
 }
 
+.principal-container {
+  text-align: center;
+}
+
 /*Button*/
 .btn {
   border-radius: 40px;
@@ -30,12 +33,12 @@ body {
   border: none;
   width: 200px;
   height: 80px;
+  margin-top: 25px;
 }
 
 /*Header*/
 header {
   width: 100%;
-  max-width: none;
 }
 header .header__title {
   display: flex;
@@ -68,8 +71,11 @@ header .header__title .header__img {
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  line-height: 50px;
+  line-height: 20px;
+  padding: 250px;
+  font-size: 30px;
 }
 
 /*Section one*/
@@ -81,6 +87,7 @@ header .header__title .header__img {
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 30px;
+  padding: 50px;
 }
 .section-one .section-filter .function-filter__content {
   display: flex;
@@ -119,7 +126,6 @@ header .header__title .header__img {
   column-gap: 30px;
 }
 .section-restaurants .restaurant-card {
-  background-color: white;
   border-radius: 20px;
   border-color: white;
   max-width: 400px;
@@ -135,6 +141,10 @@ header .header__title .header__img {
   object-fit: cover;
 }
 
+.section-restaurants a {
+  color: black;
+}
+
 .content {
   display: flex;
   align-items: center;
@@ -144,7 +154,6 @@ header .header__title .header__img {
 }
 .content .heart {
   border-color: black;
-  color: white;
 }
 
 .novelties-flag {
@@ -173,6 +182,7 @@ footer {
   max-width: 1110px;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 160px;
@@ -189,6 +199,52 @@ footer h3 {
 
 footer a {
   margin-left: 10px;
+  color: white;
+}
+
+/*Media querries tablette */
+@media screen and (min-width: 768px) and (max-width: 962px) {
+  .explore-location {
+    padding: 50px;
+    font-size: 18px;
+  }
+
+  .footer-content:not(h3) {
+    position: relative;
+    margin-top: 30px;
+    align-items: flex-end;
+    padding: 30px;
+  }
+
+  .footer-content h3 {
+    position: absolute;
+    top: -15px;
+    right: 334px;
+  }
+}
+/*Media querries tablette */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .principal-container {
+    text-align: start;
+  }
+
+  .explore-location {
+    font-size: 18px;
+    padding: 50px;
+  }
+
+  .section-restaurants {
+    padding: 50px 0px 50px 0px;
+    background-color: #F6F6F6;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    color: white;
+    padding: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
