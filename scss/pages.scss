@@ -1,4 +1,5 @@
-scss/media_querries.scss/*Pages*/
+
+/*Pages*/
 
 .menu{
     display: flex;
@@ -60,8 +61,7 @@ scss/media_querries.scss/*Pages*/
      padding-top: 45px;
  }
  }
- 
-   
+
  /*Media querries tablette pages */
 
 @media screen and (min-width: 768px) and (max-width: 962px){
@@ -78,8 +78,6 @@ scss/media_querries.scss/*Pages*/
 }
 }
 
-/*Media querries smartphone pages */
-
 @media screen and (min-width:320px) and (max-width:767px){
     
     .menu{
@@ -91,6 +89,8 @@ scss/media_querries.scss/*Pages*/
         width:100%;
         object-fit:cover;
    }
+
+
 
 .main{
     padding: 20px 40px 20px 20px;

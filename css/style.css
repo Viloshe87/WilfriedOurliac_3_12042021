@@ -1,18 +1,424 @@
-/* Error: expected selector.
- *   ,
- * 1 | scss/media_querries.scss/*Pages*∕
- *   |     ^
- *   '
- *   scss\pages.scss 1:5  @import
- *   scss\main.scss 4:8   root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: expected selector.\a   \2577 \a 1 \2502  scss/media_querries.scss/*Pages*/\d\a   \2502      ^\a   \2575 \a   scss\\pages.scss 1:5  @import\a   scss\\main.scss 4:8   root stylesheet";
+/*Variables*/
+body {
+  font-family: "Roboto", sans-serif;
 }
+
+.principal-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Header*/
+header {
+  max-width: 900px;
+}
+header .header__title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+header .header__title .header__img {
+  width: 250px;
+  height: 50px;
+  padding-top: 30px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e6e6e6;
+  width: 100%;
+}
+.home__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #353535;
+  column-gap: 30px;
+}
+
+.explore-location {
+  text-align: center;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 35px;
+  padding: 50px;
+  font-size: 20px;
+}
+
+/*Section one*/
+.section-one {
+  padding-top: 30px;
+}
+.section-one .section-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10px;
+  padding: 20px;
+}
+.section-one .section-filter .function-filter__content {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  padding-left: 30px;
+  column-gap: 30px;
+  padding-right: 30px;
+  height: 90px;
+  border-radius: 25px;
+  background-color: #F6F6F6;
+  margin: 10px;
+  position: relative;
+}
+.section-one .section-filter .function-filter__content .filter-icon {
+  color: #353535;
+}
+.section-one .section-filter .function-filter__content .circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  position: absolute;
+  right: 243px;
+}
+
+/*Section two*/
+.section-restaurants {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+.section-restaurants .restaurant-card {
+  border-radius: 20px;
+  border-color: white;
+  max-width: 400px;
+  min-height: 250px;
+  box-shadow: 2px 2px 10px #c8c8c8;
+  position: relative;
+  margin-bottom: 30px;
+}
+.section-restaurants .restaurant-card__img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+.section-restaurants .restaurant-card__img .restaurant-location {
+  text-align: left;
+}
+
+.section-restaurants a {
+  color: black;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  line-height: 15px;
+}
+.content .heart {
+  border-color: black;
+}
+
+.novelties-flag {
+  background: #99E2D0;
+  border-radius: 3px;
+  position: absolute;
+  right: 10px;
+  bottom: 235px;
+  color: #278870;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: #278870;
+}
+
+/*Footer*/
+footer {
+  width: 100%;
+  background: #333333;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 40px;
+}
+
+footer h3 {
+  font-family: Shrikhand;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+footer a {
+  margin-left: 10px;
+  color: white;
+}
+
+/*Pages*/
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+.menu__tiltle {
+  width: 260px;
+  height: 50px;
+}
+.menu__img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.menu .arrow {
+  text-decoration: none;
+  color: #353535;
+}
+
+.main {
+  background-color: #F6F6F6;
+  border-radius: 40px;
+  padding: 50px;
+  max-width: 900px;
+  margin: auto;
+  margin-top: -100px;
+  position: relative;
+}
+.main .menu__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  font-family: Shrikhand;
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.line {
+  border-bottom: 3px solid #99e2d0;
+  margin: auto;
+  width: 45px;
+}
+
+.meals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.meals__prices {
+  padding-top: 45px;
+}
+
+.btn_main {
+  display: flex;
+  justify-content: center;
+}
+
+/*Media querries tablette */
+@media screen and (min-width: 768px) and (max-width: 962px) {
+  .explore-location {
+    padding: 50px;
+    font-size: 18px;
+  }
+
+  .footer-content:not(h3) {
+    position: relative;
+    margin-top: 30px;
+    align-items: flex-end;
+    padding: 30px;
+  }
+
+  .footer-content h3 {
+    position: absolute;
+    top: -15px;
+    right: 334px;
+  }
+}
+/*Media querries tablette */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .principal-container {
+    text-align: start;
+  }
+
+  .explore-location {
+    font-size: 18px;
+    padding: 50px;
+  }
+
+  .section-restaurants {
+    padding: 50px 0px 50px 0px;
+    background-color: #F6F6F6;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    color: white;
+    padding: 20px;
+  }
+}
+/*fonts*/
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/Roboto.ttf");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../fonts/Shrikhand-Regular.ttf");
+}
+/*Pages*/
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+.menu__tiltle {
+  width: 260px;
+  height: 50px;
+}
+.menu__img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.menu .arrow {
+  text-decoration: none;
+  color: #353535;
+}
+
+.main {
+  background-color: #F6F6F6;
+  border-radius: 40px;
+  padding: 50px;
+  max-width: 900px;
+  margin: auto;
+  margin-top: -100px;
+  position: relative;
+}
+.main .menu__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  font-family: Shrikhand;
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.line {
+  border-bottom: 3px solid #99e2d0;
+  margin: auto;
+  width: 45px;
+}
+
+.meals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.meals__prices {
+  padding-top: 45px;
+}
+
+/*Media querries tablette pages */
+@media screen and (min-width: 768px) and (max-width: 962px) {
+  .menu__img {
+    height: 434px;
+  }
+
+  .main {
+    padding: 20px 40px 20px 20px;
+    margin-top: -60px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .menu {
+    column-gap: 10px;
+  }
+
+  .menu__img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .main {
+    padding: 20px 40px 20px 20px;
+    margin-top: -60px;
+    position: relative;
+  }
+  .main .menu__title {
+    font-size: 20px;
+  }
+
+  img.menu__tiltle {
+    width: 170px;
+    height: 30px;
+  }
+}
+/*Button*/
+.btn {
+  border-radius: 40px;
+  padding: 15px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border: none;
+  width: 200px;
+  height: 80px;
+  margin-top: 25px;
+}
+
+.btn_main {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
