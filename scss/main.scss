@@ -2,9 +2,25 @@
 @import"./variables.scss";
 @import"./base.scss";
 @import"./fonts.scss";
-@import"./media_querries.scss";
+@import"./pages.scss";
  
+    /*Button*/
  
+    .btn{
+        border-radius:40px;
+        padding: 15px;
+        background: linear-gradient($color-secondary,$color-primary);
+        color: white;
+        border: none;
+        width: 200px;
+        height: 80px;
+        margin-top: 25px;
+    }
+
+    .btn_main{
+        display: flex;
+        justify-content:center;
+    }
 
 
  
