@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     column-gap:30px;
+    position: relative;
     &__tiltle{
    width: 260px;
    height: 50px;
@@ -18,6 +19,8 @@
       .arrow{
      text-decoration:none;
      color:$color-icon;
+     position: absolute;
+     left:30px;
      }
  }
  
@@ -32,19 +35,21 @@
      .menu__title{
          display: flex;
          align-items: center;
-         justify-content: center;
+         justify-content:space-between;
          column-gap:30px;
          font-family:Shrikhand;
-         font-style: oblique;
+         font-style:normal;
          font-weight:bolder;
          font-size:30px;
      }
    }
    
+   .main h3{
+       text-align: start;
+   }
    .line{
      border-bottom: 3px solid #99e2d0;
-     margin:auto;
-     width:45px;
+     width:40px;
    }
   
    .meals{
