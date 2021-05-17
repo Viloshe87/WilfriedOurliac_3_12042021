@@ -1,113 +1,107 @@
-
 /*Pages*/
 
-.menu{
+.menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap:30px;
+    column-gap: 30px;
     position: relative;
-    &__tiltle{
-   width: 260px;
-   height: 50px;
-   }
-   &__img {
-     width: 100%;
-     height:500px;
-     object-fit: cover;
- }
-      .arrow{
-     text-decoration:none;
-     color:$color-icon;
-     position: absolute;
-     left:30px;
-     }
- }
- 
- .main{
-     background-color:$color-container1;
-     border-radius:40px;
-     padding:50px;
-     max-width:900px;
-     margin: auto;
-     margin-top: -100px;
-     position: relative;
-     .menu__title{
-         display: flex;
-         align-items: center;
-         justify-content:space-between;
-         column-gap:30px;
-         font-family:Shrikhand;
-         font-style:normal;
-         font-weight:bolder;
-         font-size:30px;
-     }
-   }
-   
-   .main h3{
-       text-align: start;
-   }
-   .line{
-     border-bottom: 3px solid #99e2d0;
-     width:40px;
-   }
-  
-   .meals{
- display:flex;
- justify-content:space-between;
- align-items:center;
- border-radius:30px;
- background-color: white;
- padding: 10px;
- width:100%;
- margin-top: 30px;
- margin-bottom: 30px;
- &__prices{
-     padding-top: 45px;
- }
- }
+    &__tiltle {
+        width: 260px;
+        height: 50px;
+    }
+    &__img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+    .arrow {
+        text-decoration: none;
+        color: $color-icon;
+        position: absolute;
+        left: 30px;
+    }
+}
 
- /*Media querries tablette pages */
+.main {
+    background-color: $color-container1;
+    border-radius: 40px;
+    padding: 50px;
+    max-width: 900px;
+    margin: auto;
+    margin-top: -100px;
+    position: relative;
+    .menu__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 30px;
+        font-family: Shrikhand;
+        font-style: normal;
+        font-weight: bolder;
+        font-size: 30px;
+    }
+}
 
-@media screen and (min-width: 768px) and (max-width: 962px){
+.main h3 {
+    text-align: start;
+}
+.line {
+    border-bottom: 3px solid #99e2d0;
+    width: 40px;
+}
 
+.meals {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &__prices {
+        padding-top: 45px;
+    }
+}
+
+/*Media querries tablette pages */
+
+@media screen and (min-width: 768px) and (max-width: 962px) {
     .menu__img {
-         height:434px;
+        height: 434px;
     }
 
-
-.main{
-    padding: 20px 40px 20px 20px;
-    margin-top: -60px;
-    position: relative;
+    .main {
+        padding: 20px 40px 20px 20px;
+        margin-top: -60px;
+        position: relative;
+    }
 }
-}
 
-@media screen and (min-width:320px) and (max-width:767px){
-    
-    .menu{
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .menu {
         column-gap: 10px;
     }
-    
-   .menu__img {
-        height:300px;
-        width:100%;
-        object-fit:cover;
-   }
 
+    .menu__img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
 
+    .main {
+        padding: 20px 40px 20px 20px;
+        margin-top: -60px;
+        position: relative;
+        .menu__title {
+            font-size: 20px;
+        }
+    }
 
-.main{
-    padding: 20px 40px 20px 20px;
-    margin-top: -60px;
-    position: relative;
- .menu__title{
-    font-size: 20px;
-}
-}
-
-img.menu__tiltle {
-    width: 170px;
-    height: 30px;
-}
+    img.menu__tiltle {
+        width: 170px;
+        height: 30px;
+    }
 }
