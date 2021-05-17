@@ -1,32 +1,23 @@
-
-@import"./variables.scss";
-@import"./base.scss";
-@import"./fonts.scss";
-@import"./pages.scss";
-
+@import "./variables.scss";
+@import "./base.scss";
+@import "./fonts.scss";
+@import "./pages.scss";
 
 /*Button*/
- 
-    .btn{
-        border-radius:50px;
-        padding: 15px;
-        background: linear-gradient($color-secondary,$color-primary);
-        color: white;
-        border: none;
-        width: 250px;
-        height:100px;
-        margin-top: 25px;
-        font-size: 18px;
-    }
 
-    .btn_main{
-        display: flex;
-        justify-content:center;
-    }
+.btn {
+    border-radius: 50px;
+    padding: 15px;
+    background: linear-gradient($color-secondary, $color-primary);
+    color: white;
+    border: none;
+    width: 250px;
+    height: 100px;
+    margin-top: 25px;
+    font-size: 18px;
+}
 
-
- 
-
-
-    
-    
+.btn_main {
+    display: flex;
+    justify-content: center;
+}

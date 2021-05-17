@@ -145,8 +145,8 @@ header .header__title .header__img {
   background: #99E2D0;
   border-radius: 3px;
   position: absolute;
-  right: 10px;
-  bottom: 235px;
+  right: 15px;
+  top: 15px;
   color: #278870;
   width: 80px;
   height: 30px;
