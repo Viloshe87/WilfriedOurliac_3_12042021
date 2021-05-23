@@ -1,0 +1,61 @@
+/*loader*/
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    70% {
+        visibility: visible;
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+
+    85% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: rotate(720deg);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes background-loader {
+    0% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes logo {
+    0% {
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 0.9;
+    }
+
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

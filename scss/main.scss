@@ -2,10 +2,13 @@
 @import "./base.scss";
 @import "./fonts.scss";
 @import "./pages.scss";
+@import "./animation.scss";
+@import "./Keyframes.scss";
 
 /*Button*/
 
 .btn {
+    cursor: pointer;
     border-radius: 50px;
     padding: 15px;
     background: linear-gradient($color-secondary, $color-primary);
@@ -15,6 +18,13 @@
     height: 100px;
     margin-top: 25px;
     font-size: 18px;
+    box-shadow: $shadow;
+    &:hover {
+        box-shadow: 1vw 1vw 1vw #a7a6a6;
+        transition: 300ms;
+        opacity: 0.9;
+        transform: scale(1.15);
+    }
 }
 
 .btn_main {

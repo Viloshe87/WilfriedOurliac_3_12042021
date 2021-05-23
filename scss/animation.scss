@@ -1,0 +1,64 @@
+/*animation scss*/
+
+.loader-container {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  animation: background-loader 3s linear;
+  background: #353535;
+  opacity: 1;
+  visibility: hidden;
+  .loader__icon {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Shrikhand;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 20px;
+    animation: logo 3s ease-in-out;
+  }
+}
+
+.loader {
+  background-color: #353535;
+  width: 150px;
+  height: 150px;
+  border: 16px solid #cccccc;
+  margin: auto;
+  border-top-color: $color-primary;
+  border-left-color: $color-icon;
+  border-right-color: $color-icon;
+  border-bottom-color: $color-secondary;
+  border-radius: 50%;
+  animation: spin 3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+
+.loader__icon {
+  margin: auto;
+  padding-top: 390px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Shrikhand;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 20px;
+  animation: logo 3s ease-in-out;
+}

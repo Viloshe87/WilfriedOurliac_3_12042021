@@ -61,7 +61,8 @@
     width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
-    &__prices {
+    box-shadow:$shadow;
+     &__prices {
         padding-top: 45px;
     }
 }
