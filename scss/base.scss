@@ -83,9 +83,10 @@ header {
             box-shadow: $shadow;
             &:hover {
                 box-shadow: 1vw 1vw 1vw #a7a6a6;
-                transition: 300ms;
+                transition: 400ms;
                 background: $color-secondary;
                 transform: scale(1.05);
+                opacity: 0.9;
             }
             .filter-icon {
                 color: $color-icon;
@@ -124,8 +125,7 @@ header {
         margin-bottom: 30px;
         &:hover {
             box-shadow: 1vw 1vw 1vw #a7a6a6;
-            transition: 300ms;
-            background: $color-tertiary;
+            transition: 400ms;
             transform: scale(1.05);
         }
         &__img {
@@ -197,3 +197,5 @@ footer a {
     margin-left: 10px;
     color: white;
 }
+
+

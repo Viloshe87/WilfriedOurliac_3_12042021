@@ -46,10 +46,12 @@
 @keyframes logo {
     0% {
         opacity: 0;
+        transform: rotate(720deg);
     }
 
     65% {
-        opacity: 0.9;
+        opacity: 0.7;
+        transform: rotate(0deg);
     }
 
     85% {
@@ -57,5 +59,23 @@
     }
     100% {
         opacity: 0;
+        transform: rotate(0deg);
+    }
+}
+
+/*coeur*/
+
+@keyframes like {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

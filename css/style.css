@@ -86,9 +86,10 @@ header .header__title .header__img {
 }
 .section-one .section-filter .function-filter__content:hover {
   box-shadow: 1vw 1vw 1vw #a7a6a6;
-  transition: 300ms;
+  transition: 400ms;
   background: #ff79da;
   transform: scale(1.05);
+  opacity: 0.9;
 }
 .section-one .section-filter .function-filter__content .filter-icon {
   color: #353535;
@@ -125,8 +126,7 @@ header .header__title .header__img {
 }
 .section-restaurants .restaurant-card:hover {
   box-shadow: 1vw 1vw 1vw #a7a6a6;
-  transition: 300ms;
-  background: #99e2d0;
+  transition: 400ms;
   transform: scale(1.05);
 }
 .section-restaurants .restaurant-card__img {
@@ -286,32 +286,51 @@ footer a {
     position: relative;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .menu {
-    column-gap: 10px;
+/*Media querries tablette */
+@media screen and (min-width: 768px) and (max-width: 962px) {
+  .explore-location {
+    padding: 50px;
+    font-size: 18px;
   }
 
-  .menu__img {
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .main {
-    padding: 20px 40px 20px 20px;
-    margin-top: -60px;
+  .footer-content:not(h3) {
     position: relative;
-  }
-  .main .menu__title {
-    font-size: 20px;
+    margin-top: 30px;
+    align-items: flex-end;
+    padding: 30px;
   }
 
-  img.menu__tiltle {
-    width: 170px;
-    height: 30px;
+  .footer-content h3 {
+    position: absolute;
+    top: -15px;
+    right: 334px;
+  }
+}
+/*Media querries tablette */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .principal-container {
+    text-align: start;
+  }
+
+  .explore-location {
+    font-size: 18px;
+    padding: 50px;
+  }
+
+  .section-restaurants {
+    padding: 50px 0px 50px 0px;
+    background-color: #f6f6f6;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    padding: 20px;
   }
 }
 /*animation scss*/
+/*loader*/
 .loader-container {
   position: fixed;
   z-index: 20;
@@ -323,18 +342,20 @@ footer a {
   background: #353535;
   opacity: 1;
   visibility: hidden;
+  position: fixed;
 }
 .loader-container .loader__icon {
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
   color: white;
   font-family: Shrikhand;
   font-style: italic;
   font-weight: 100;
   font-size: 20px;
+  padding: 60px;
   animation: logo 3s ease-in-out;
 }
 
@@ -350,29 +371,59 @@ footer a {
   border-bottom-color: #ff79da;
   border-radius: 50%;
   animation: spin 3s ease-in-out;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   visibility: hidden;
 }
+.loader:hover {
+  animation: like 2s ease-in-out;
+  z-index: 2;
+}
 
-.loader__icon {
-  margin: auto;
-  padding-top: 390px;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: Shrikhand;
-  font-style: italic;
-  font-weight: 100;
-  font-size: 20px;
-  animation: logo 3s ease-in-out;
+.heart-empty {
+  width: 25px;
+  position: relative;
+  right: 10px;
+  background: white;
+  z-index: 2;
+}
+.heart-empty:hover {
+  animation: like 2s linear;
+  z-index: 1;
+  transform-origin: 50% bottom;
+}
+
+.heart-full {
+  width: 25px;
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+  opacity: 1;
+}
+
+.heart-empty2 {
+  width: 25px;
+  position: relative;
+  right: -30px;
+  bottom: 5px;
+  background: white;
+  z-index: 2;
+}
+.heart-empty2:hover {
+  animation: like 2s linear;
+  z-index: 1;
+  transform-origin: 50% bottom;
+}
+
+.heart-full2 {
+  width: 25px;
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+  opacity: 1;
 }
 
 /*loader*/
@@ -414,15 +465,33 @@ footer a {
 @keyframes logo {
   0% {
     opacity: 0;
+    transform: rotate(720deg);
   }
   65% {
-    opacity: 0.9;
+    opacity: 0.7;
+    transform: rotate(0deg);
   }
   85% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+    transform: rotate(0deg);
+  }
+}
+/*coeur*/
+@keyframes like {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*Button*/
@@ -443,7 +512,7 @@ footer a {
   box-shadow: 1vw 1vw 1vw #a7a6a6;
   transition: 300ms;
   opacity: 0.9;
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 .btn_main {

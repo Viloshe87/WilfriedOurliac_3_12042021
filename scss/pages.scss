@@ -81,28 +81,52 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
-    .menu {
-        column-gap: 10px;
+/*Media querries tablette */
+
+@media screen and (min-width: 768px) and (max-width: 962px){
+
+    .explore-location{
+        padding:50px;
+        font-size:18px;
     }
 
-    .menu__img {
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
+    .footer-content:not(h3){
+        position:relative;
+        margin-top:30px;
+        align-items: flex-end;
+        padding:30px;
+
+         }
+         .footer-content h3{
+             position: absolute;
+             top:-15px;
+             right:334px;
+         }
+}
+
+/*Media querries tablette */
+
+@media screen and (min-width:320px) and (max-width:767px){
+
+    .principal-container{
+        text-align:start;
     }
 
-    .main {
-        padding: 20px 40px 20px 20px;
-        margin-top: -60px;
-        position: relative;
-        .menu__title {
-            font-size: 20px;
-        }
+    .explore-location{
+        font-size:18px;
+        padding: 50px;
     }
 
-    img.menu__tiltle {
-        width: 170px;
-        height: 30px;
-    }
+
+.section-restaurants{
+    padding:50px 0px 50px 0px;
+    background-color:$color-container1;
+}
+
+.footer-content{
+    flex-direction: column;
+    align-items:flex-start;
+    color: white;
+   padding:20px;
+ }
 }

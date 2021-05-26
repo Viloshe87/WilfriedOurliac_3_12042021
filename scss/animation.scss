@@ -1,4 +1,7 @@
+
 /*animation scss*/
+
+/*loader*/
 
 .loader-container {
   position: fixed;
@@ -11,17 +14,19 @@
   background: #353535;
   opacity: 1;
   visibility: hidden;
+  position: fixed;
   .loader__icon {
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
     color: white;
     font-family: Shrikhand;
     font-style: italic;
     font-weight: 100;
     font-size: 20px;
+    padding: 60px;
     animation: logo 3s ease-in-out;
   }
 }
@@ -38,27 +43,59 @@
   border-bottom-color: $color-secondary;
   border-radius: 50%;
   animation: spin 3s ease-in-out;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   visibility: hidden;
+  &:hover {
+    animation: like 2s ease-in-out;
+    z-index: 2;
+  }
 }
 
-.loader__icon {
-  margin: auto;
-  padding-top: 390px;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: Shrikhand;
-  font-style: italic;
-  font-weight: 100;
-  font-size: 20px;
-  animation: logo 3s ease-in-out;
+.heart-empty {
+  width: 25px;
+  position: relative;
+  right: 10px;
+  background: white;
+  z-index:2;
+  &:hover {
+    animation: like 2s linear;
+    z-index: 1;
+    transform-origin: 50% bottom;
+  }
 }
+
+.heart-full {
+  width: 25px;
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+  opacity: 1;
+}
+
+.heart-empty2 {
+  width: 25px;
+  position: relative;
+  right:-30px;
+  bottom:5px;
+  background: white;
+  z-index:2;
+  &:hover {
+    animation: like 2s linear;
+    z-index: 1;
+    transform-origin: 50% bottom;
+  }
+
+}
+
+.heart-full2 {
+  width: 25px;
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+  opacity: 1;
+  }
+
