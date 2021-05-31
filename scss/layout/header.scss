@@ -1,0 +1,42 @@
+/*Header*/
+
+header {
+    max-width: 900px;
+    .header__title {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        .header__img {
+            width: 250px;
+            height: 50px;
+            padding-top: 30px;
+        }
+    }
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6e6e6;
+    width: 100%;
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: rgb(53, 53, 53);
+        column-gap: 30px;
+    }
+}
+
+.explore-location {
+    text-align: center;
+    background-color: $color-container1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 35px;
+    padding: 50px;
+    font-size: 20px;
+}
