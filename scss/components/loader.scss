@@ -46,8 +46,8 @@
     right: 0;
     bottom: 0;
     visibility: hidden;
-    &:hover {
-        animation: like 2s ease-in-out;
+    &:active {
+        animation: like 3s ease-in-out;
         z-index: 2;
     }
 }

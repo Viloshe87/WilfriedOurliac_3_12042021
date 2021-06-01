@@ -108,20 +108,19 @@
 
 @keyframes validation {
     0% {
-        opacity:1;
-        transform: translatex(-50px);
+        transform: translatex(15px);
     }
 
     100% {
-        opacity: 1;
     }
 }
 
 @keyframes rotade-icon {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }

@@ -1,11 +1,12 @@
 /*Variables*/
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 14px;
   margin: 0px;
 }
 
 .principal-container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -33,6 +34,7 @@ a {
   align-items: center;
   column-gap: 30px;
   position: relative;
+  font-size: 10px;
 }
 .menu__tiltle {
   width: 260px;
@@ -48,13 +50,14 @@ a {
   color: #353535;
   position: absolute;
   left: 30px;
+  font-size: 18px;
 }
 
 .main {
   background-color: #f6f6f6;
   border-radius: 40px;
   padding: 50px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
   margin-top: -100px;
   position: relative;
@@ -88,31 +91,38 @@ a {
   align-items: center;
   border-radius: 30px;
   background-color: white;
-  padding: 10px;
-  width: 100%;
+  padding: 20px;
+  width: 90%;
+  height: 60px;
   margin-bottom: 30px;
-  z-index: index 20;
+  z-index: 20;
   opacity: 1;
   position: relative;
 }
 .meals:hover {
-  width: 89%;
+  width: 85%;
   border-radius: 30px 0px 0px 30px;
   z-index: 1;
 }
-.meals:hover:hover + .meals__confirmation {
+.meals:hover .meals__prices {
   animation: validation 1s backwards;
 }
-.meals:hover:hover + .meals__confirmation:hover + .meals__icon {
-  animation: rotade-icon 1s backwards;
+.meals:hover .meals__confirmation {
+  animation: validation 1s backwards;
+  opacity: 1;
 }
+.meals:hover .meals__confirmation .meals__icon {
+  animation: rotade-icon 1s ease-out;
+}
+
 .meals__prices {
-  padding-top: 45px;
+  padding-top: 30px;
+  margin-right: 30px;
 }
 
 .meals__confirmation {
-  height: 120px;
-  width: 100px;
+  height: 100px;
+  width: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,8 +131,8 @@ a {
   border-radius: 0px 30px 30px 0px;
   font-size: 18px;
   position: absolute;
-  right: -102px;
-  opacity: 1;
+  right: -48px;
+  opacity: 0;
   z-index: 1;
 }
 .meals__confirmation .meals__wrapicon {
@@ -170,18 +180,20 @@ a {
     padding: 50px;
     font-size: 18px;
   }
-
-  .footer-content:not(h3) {
-    position: relative;
-    margin-top: 30px;
-    align-items: flex-end;
-    padding: 30px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .principal-container {
+    text-align: start;
   }
 
-  .footer-content h3 {
-    position: absolute;
-    top: -15px;
-    right: 334px;
+  .explore-location {
+    font-size: 18px;
+    padding: 50px;
+  }
+
+  .section-restaurants {
+    padding: 50px 0px 50px 0px;
+    background-color: #f6f6f6;
   }
 }
 /*loader*/
@@ -273,11 +285,7 @@ a {
 }
 @keyframes validation {
   0% {
-    opacity: 1;
-    transform: translatex(-50px);
-  }
-  100% {
-    opacity: 1;
+    transform: translatex(15px);
   }
 }
 @keyframes rotade-icon {
@@ -290,7 +298,7 @@ a {
 }
 /*Header*/
 header {
-  max-width: 900px;
+  max-width: 1100px;
 }
 header .header__title {
   display: flex;
@@ -419,7 +427,7 @@ header .header__title .header__img {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  line-height: 10px;
+  line-height: 5px;
 }
 
 .novelties-flag {
@@ -454,6 +462,11 @@ footer {
   color: white;
   padding: 40px;
 }
+.footer-content .footer-text {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 5px;
+}
 
 footer h3 {
   font-family: Shrikhand;
@@ -468,26 +481,20 @@ footer a {
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .principal-container {
-    text-align: start;
-  }
-
-  .explore-location {
-    font-size: 18px;
-    padding: 50px;
-  }
-
-  .section-restaurants {
-    padding: 50px 0px 50px 0px;
-    background-color: #f6f6f6;
-  }
-
   .footer-content {
     display: flex;
-    justify-content: column;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
     color: white;
-    padding: 40px;
+  }
+  .footer-content .footer-content__title {
+    margin-left: 8px;
+  }
+  .footer-content .footer-text {
+    margin-bottom: 10px;
+    align-items: baseline;
+    column-gap: 5px;
   }
 }
 /*Button*/
@@ -564,8 +571,8 @@ footer a {
   bottom: 0;
   visibility: hidden;
 }
-.loader:hover {
-  animation: like 2s ease-in-out;
+.loader:active {
+  animation: like 3s ease-in-out;
   z-index: 2;
 }
 
