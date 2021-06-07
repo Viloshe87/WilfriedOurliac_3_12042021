@@ -108,7 +108,16 @@
 
 @keyframes validation {
     0% {
-        transform: translatex(15px);
+        transform: translatex(90px);
+    }
+
+    100% {
+    }
+}
+
+@keyframes price {
+    0% {
+        transform: translatex(90px);
     }
 
     100% {
