@@ -529,12 +529,13 @@ footer a {
   margin-top: 25px;
   font-size: 18px;
   box-shadow: 1vw 1vw 1vw #d1d1d1;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
 }
 .btn:hover {
-  box-shadow: 1vw 1vw 1vw #a7a6a6;
-  transition: 300ms;
-  opacity: 0.9;
-  transform: scale(1.05);
+  transform: scale(1.15);
+  box-shadow: 1vw 1vw 1vw #d1d1d1;
 }
 
 .btn_main {
