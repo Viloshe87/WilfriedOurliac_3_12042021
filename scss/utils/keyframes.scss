@@ -76,23 +76,6 @@
     }
 }
 
-/*coeur*/
-
-@keyframes like {
-    0% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 0;
-    }
-    75% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 /*card-menu */
 
 @keyframes move-card {
@@ -112,6 +95,9 @@
     }
 
     100% {
+        
+        animation-iteration-count: 2;
+        animation-direction: alternate;
     }
 }
 

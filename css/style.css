@@ -104,7 +104,8 @@ a {
   position: relative;
   overflow: hidden;
 }
-.meals .meals__text p, .meals .meals__text h4 {
+.meals .meals__text p,
+.meals .meals__text h4 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -113,24 +114,31 @@ a {
   z-index: 1;
 }
 .meals:hover .meals__text {
-  width: calc(100% - 150px);
+  width: calc(100% - 90px);
 }
 .meals:hover .meals__prices {
-  animation: validation 1s forwards;
-  right: 120px;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  transition: transform 0.5s ease-in;
+  transform: translatex(-90px);
 }
 .meals:hover .meals__confirmation {
-  animation: validation 1s backwards;
+  transform: translatex(-90px);
+  transition: transform 0.5s ease-in;
   opacity: 1;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
 }
 .meals:hover .meals__confirmation .meals__icon {
-  animation: rotade-icon 1s ease-out;
+  transform: rotate(1turn);
 }
 
 .meals__prices {
   padding-top: 30px;
   position: absolute;
   right: 10px;
+  transition-duration: 1s;
 }
 
 .meals__confirmation {
@@ -144,10 +152,11 @@ a {
   border-radius: 0px 30px 30px 0px;
   font-size: 18px;
   position: absolute;
-  right: 0px;
+  right: -96px;
   opacity: 0;
   z-index: 1;
   overflow: hidden;
+  transition-duration: 0.5s;
 }
 .meals__confirmation .meals__wrapicon {
   background-color: white;
@@ -164,6 +173,7 @@ a {
   align-items: center;
   padding: 5px;
   color: #99e2d0;
+  transition-duration: 1s;
 }
 
 .main h3 {
@@ -272,21 +282,6 @@ a {
     transform: rotate(0deg);
   }
 }
-/*coeur*/
-@keyframes like {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /*card-menu */
 @keyframes move-card {
   0% {
@@ -300,6 +295,10 @@ a {
 @keyframes validation {
   0% {
     transform: translatex(90px);
+  }
+  100% {
+    animation-iteration-count: 2;
+    animation-direction: alternate;
   }
 }
 @keyframes price {
@@ -529,7 +528,6 @@ footer a {
   margin-top: 25px;
   font-size: 18px;
   box-shadow: 1vw 1vw 1vw #d1d1d1;
-  transform: scale(1);
   transition-property: transform;
   transition-duration: 400ms;
 }
@@ -600,12 +598,14 @@ footer a {
 .heart-empty {
   width: 25px;
   position: relative;
-  right: 10px;
-  background: white;
+  bottom: 1px;
+  background-color: white;
   z-index: 2;
+  transition: 1s;
+  opacity: 1;
 }
 .heart-empty:hover {
-  animation: like 2s linear;
+  opacity: 0;
   z-index: 1;
   transform-origin: 50% bottom;
 }
@@ -613,7 +613,6 @@ footer a {
 .heart-full {
   width: 25px;
   position: absolute;
-  right: 20px;
   z-index: 1;
   opacity: 1;
 }
@@ -621,12 +620,15 @@ footer a {
 .heart-empty2 {
   width: 25px;
   position: relative;
-  bottom: 6px;
-  background: white;
+  bottom: 1px;
+  background-color: white;
   z-index: 2;
+  transition: 1s;
+  opacity: 1;
+  bottom: 6px;
 }
 .heart-empty2:hover {
-  animation: like 2s linear;
+  opacity: 0;
   z-index: 1;
   transform-origin: 50% bottom;
 }
