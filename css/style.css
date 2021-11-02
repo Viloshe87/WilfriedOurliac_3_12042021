@@ -415,8 +415,7 @@ header .header__title .header__img {
 .section-restaurants .restaurant-card {
   border-radius: 20px;
   border-color: white;
-  max-width: 400px;
-  min-height: 250px;
+  width: 250px;
   box-shadow: 1vw 1vw 1vw #d1d1d1;
   position: relative;
   margin-bottom: 30px;
